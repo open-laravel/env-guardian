@@ -62,9 +62,9 @@ class DiscoverEnvCommand extends Command
 
         // Display results
         $this->info('📊 Discovery Results:');
-        $this->line("   Total keys discovered: ".count($discoveredKeys));
-        $this->line("   Keys in .env.example: ".count($exampleKeys));
-        $this->line("   Missing from .env.example: ".count($missingKeys));
+        $this->line('   Total keys discovered: '.count($discoveredKeys));
+        $this->line('   Keys in .env.example: '.count($exampleKeys));
+        $this->line('   Missing from .env.example: '.count($missingKeys));
         $this->newLine();
 
         if (! empty($missingKeys)) {

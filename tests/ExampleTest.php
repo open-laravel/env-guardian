@@ -76,4 +76,3 @@ it('handles quoted values', function () {
 
     unlink($tempFile);
 });
-

@@ -48,8 +48,8 @@ class CheckEnvCommand extends Command
         $missingKeys = array_diff($requiredKeys, $envKeys);
 
         $this->info('📊 Environment Check:');
-        $this->line("   Required keys: ".count($requiredKeys));
-        $this->line("   Missing keys: ".count($missingKeys));
+        $this->line('   Required keys: '.count($requiredKeys));
+        $this->line('   Missing keys: '.count($missingKeys));
         $this->newLine();
 
         if (empty($missingKeys)) {

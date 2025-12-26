@@ -20,4 +20,3 @@ arch('commands are not used in services')
 arch('services do not use env() helper')
     ->expect('OpenLaravel\EnvGuardian\Services')
     ->not->toUse('env');
-

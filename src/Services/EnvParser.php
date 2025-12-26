@@ -7,7 +7,6 @@ class EnvParser
     /**
      * Parse an environment file and return an array of key-value pairs
      *
-     * @param  string  $filePath
      * @return array<string, string>
      */
     public function parse(string $filePath): array
@@ -57,7 +56,6 @@ class EnvParser
     /**
      * Get all keys from an environment file
      *
-     * @param  string  $filePath
      * @return array<string>
      */
     public function getKeys(string $filePath): array
@@ -67,9 +65,6 @@ class EnvParser
 
     /**
      * Parse a value, handling quoted strings
-     *
-     * @param  string  $value
-     * @return string
      */
     protected function parseValue(string $value): string
     {
@@ -86,9 +81,6 @@ class EnvParser
 
     /**
      * Get the raw content of a file
-     *
-     * @param  string  $filePath
-     * @return string
      */
     public function getContent(string $filePath): string
     {

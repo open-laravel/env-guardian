@@ -7,11 +7,7 @@ class EnvWriter
     /**
      * Append new keys to an environment file
      *
-     * @param  string  $filePath
      * @param  array<string>  $keys
-     * @param  string  $maskValue
-     * @param  bool  $sort
-     * @param  bool  $grouped
      * @return int Number of keys added
      */
     public function appendKeys(
@@ -51,8 +47,6 @@ class EnvWriter
      * Append keys with grouping by prefix
      *
      * @param  array<string>  $keys
-     * @param  string  $maskValue
-     * @return string
      */
     protected function appendGroupedKeys(array $keys, string $maskValue): string
     {
@@ -83,8 +77,6 @@ class EnvWriter
      * Append keys without grouping
      *
      * @param  array<string>  $keys
-     * @param  string  $maskValue
-     * @return string
      */
     protected function appendPlainKeys(array $keys, string $maskValue): string
     {
@@ -103,9 +95,6 @@ class EnvWriter
 
     /**
      * Get the prefix of a key (e.g., APP from APP_NAME)
-     *
-     * @param  string  $key
-     * @return string
      */
     protected function getKeyPrefix(string $key): string
     {
@@ -120,9 +109,6 @@ class EnvWriter
 
     /**
      * Sort the content of an environment file
-     *
-     * @param  string  $filePath
-     * @return void
      */
     public function sortFile(string $filePath): void
     {

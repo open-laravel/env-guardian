@@ -3,8 +3,8 @@
 namespace OpenLaravel\EnvGuardian\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Orchestra\Testbench\TestCase as Orchestra;
 use OpenLaravel\EnvGuardian\EnvGuardianServiceProvider;
+use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
 {

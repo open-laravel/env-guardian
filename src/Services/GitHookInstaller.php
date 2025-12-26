@@ -7,8 +7,6 @@ class GitHookInstaller
     /**
      * Install the pre-commit hook
      *
-     * @param  string  $basePath
-     * @param  bool  $force
      * @return array{success: bool, message: string}
      */
     public function install(string $basePath, bool $force = false): array
@@ -35,8 +33,6 @@ class GitHookInstaller
 
     /**
      * Get the content of the pre-commit hook
-     *
-     * @return string
      */
     protected function getHookContent(): string
     {
@@ -74,7 +70,6 @@ BASH;
     /**
      * Uninstall the pre-commit hook
      *
-     * @param  string  $basePath
      * @return array{success: bool, message: string}
      */
     public function uninstall(string $basePath): array
@@ -107,9 +102,6 @@ BASH;
 
     /**
      * Check if the hook is installed
-     *
-     * @param  string  $basePath
-     * @return bool
      */
     public function isInstalled(string $basePath): bool
     {

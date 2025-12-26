@@ -7,7 +7,6 @@ class EnvScanner
     /**
      * Scan config files and code for env() usage
      *
-     * @param  string  $basePath
      * @return array<string>
      */
     public function scan(string $basePath): array
@@ -38,7 +37,6 @@ class EnvScanner
     /**
      * Scan a directory for env() usage
      *
-     * @param  string  $directory
      * @return array<string>
      */
     protected function scanDirectory(string $directory): array
@@ -60,7 +58,6 @@ class EnvScanner
     /**
      * Scan a file for env() usage
      *
-     * @param  string  $filePath
      * @return array<string>
      */
     protected function scanFile(string $filePath): array
