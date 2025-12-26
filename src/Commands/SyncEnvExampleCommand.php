@@ -53,9 +53,10 @@ class SyncEnvExampleCommand extends Command
 
         // Display summary
         $this->info('📊 Environment Summary:');
-        $this->line("   Total keys in .env: {$this->colorize(count($envKeys), 'cyan')}");
-        $this->line("   Existing keys in .env.example: {$this->colorize(count($exampleKeys), 'cyan')}");
-        $this->line("   Missing keys: {$this->colorize(count($missingKeys), count($missingKeys) > 0 ? 'yellow' : 'green')}");
+        $this->line('   Total keys in .env: <fg=cyan>'.count($envKeys).'</>');
+        $this->line('   Existing keys in .env.example: <fg=cyan>'.count($exampleKeys).'</>');
+        $missingColor = count($missingKeys) > 0 ? 'yellow' : 'green';
+        $this->line('   Missing keys: <fg='.$missingColor.'>'.count($missingKeys).'</>');
 
         if (empty($missingKeys)) {
             $this->newLine();
@@ -89,17 +90,5 @@ class SyncEnvExampleCommand extends Command
         $this->info("✔ Successfully added {$added} key(s) to .env.example");
 
         return self::SUCCESS;
-    }
-
-    protected function colorize(int $value, string $color): string
-    {
-        $colors = [
-            'cyan' => "\e[36m",
-            'yellow' => "\e[33m",
-            'green' => "\e[32m",
-            'reset' => "\e[0m",
-        ];
-
-        return ($colors[$color] ?? '').$value.($colors['reset'] ?? '');
     }
 }

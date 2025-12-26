@@ -68,8 +68,8 @@ class EnvScanner
         $content = file_get_contents($filePath);
         $keys = [];
 
-        // Match env('KEY') and env("KEY")
-        preg_match_all("/env\(['\"]([A-Z0-9_]+)['\"]/", $content, $matches);
+        // Match env('KEY') and env("KEY") - support both uppercase and lowercase
+        preg_match_all("/env\(['\"]([A-Za-z0-9_]+)['\"]/", $content, $matches);
 
         if (! empty($matches[1])) {
             $keys = array_merge($keys, $matches[1]);
