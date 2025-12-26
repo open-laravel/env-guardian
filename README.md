@@ -1,6 +1,6 @@
 # Env Guardian
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/open-laravel/env-guardian.svg?style=flat-square)](https://packagist.org/packages/open-laravel/env-guardian)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/open-laravel/env-guardian.svg?style=flat-square)]([https://packagist.org/packages/open-laravel/env-guardian](https://packagist.org/packages/open-laravel/env-guardian))
 [![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/open-laravel/env-guardian/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/open-laravel/env-guardian/actions?query=workflow%3Arun-tests+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/open-laravel/env-guardian.svg?style=flat-square)](https://packagist.org/packages/open-laravel/env-guardian)
 
